@@ -59,4 +59,8 @@ public class ProductService {
     Pageable pageable = PageRequest.of(pageNumber,pageSize,sort);
     return productRepository.findAll(pageable);
   }
+
+  public List<Product> findAllProductsQueryService(){
+    return productRepository.findAllProductsQuery();
+  }
 }

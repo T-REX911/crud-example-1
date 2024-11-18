@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/avi/v1")
+@RequestMapping("/api/v1")
 public class ProductController {
   @Autowired
   private ProductService productService;
@@ -30,6 +30,11 @@ public class ProductController {
     return productService.getProducts();
   }
 
+  @GetMapping("/productsQ")
+  public ResponseEntity<List<Product>> findAllProductsQuery(){
+    List<Product> products = productService.findAllProductsQueryService();
+    return ResponseEntity.ok(products);
+  }
   @GetMapping("/productsList")
   public ResponseEntity<List<Product>> findAllProductsNew(){
     List<Product> products = productService.getProducts();
