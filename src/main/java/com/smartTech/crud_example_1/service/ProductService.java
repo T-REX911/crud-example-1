@@ -3,6 +3,10 @@ package com.smartTech.crud_example_1.service;
 import com.smartTech.crud_example_1.entity.Product;
 import com.smartTech.crud_example_1.repository.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -50,5 +54,13 @@ public class ProductService {
     return productRepository.save(existingProduct);
   }
 
+  public Page<Product> getProductsPagination(int pageNumber, int pageSize) {
+    Sort sort = Sort.by(Sort.Direction.ASC,"name");
+    Pageable pageable = PageRequest.of(pageNumber,pageSize,sort);
+    return productRepository.findAll(pageable);
+  }
 
+  public List<Product> findAllProductsQueryService(){
+    return productRepository.findAllProductsQuery();
+  }
 }

@@ -3,12 +3,14 @@ package com.smartTech.crud_example_1.controller;
 import com.smartTech.crud_example_1.entity.Product;
 import com.smartTech.crud_example_1.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
-@RequestMapping("/avi/v1")
+@RequestMapping("/api/v1")
 public class ProductController {
   @Autowired
   private ProductService productService;
@@ -26,6 +28,24 @@ public class ProductController {
   @GetMapping("/products")
   public List<Product> findAllProducts(){
     return productService.getProducts();
+  }
+
+  @GetMapping("/productsQ")
+  public ResponseEntity<List<Product>> findAllProductsQuery(){
+    List<Product> products = productService.findAllProductsQueryService();
+    return ResponseEntity.ok(products);
+  }
+  @GetMapping("/productsList")
+  public ResponseEntity<List<Product>> findAllProductsNew(){
+    List<Product> products = productService.getProducts();
+    return ResponseEntity.ok(products);
+  }
+
+  @GetMapping("/products/{pageNumber}/{pageSize}")
+  public ResponseEntity<Page<Product>> findAllProducts(@PathVariable int pageNumber,@PathVariable int pageSize){
+
+    Page<Product> products = productService.getProductsPagination(pageNumber,pageSize);
+    return ResponseEntity.ok(products);
   }
 
   @GetMapping("/productById/{id}")
