@@ -34,4 +34,8 @@ public class OrderService {
     orderRepository.deleteById(id);
     return "Deleted " + id;
   }
+
+  public List<Object> getOrdersByOrderNumber(int orderNumber){
+    return orderRepository.getOrdersByOrderNumber(orderNumber);
+  }
 }

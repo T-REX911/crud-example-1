@@ -5,16 +5,19 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Entity
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name = "Order")
+@Entity
+@Table(name = "Orders")
 public class Order {
 
   @Id
   @GeneratedValue(strategy = GenerationType.AUTO)
   private int id;
+
+  @Column(name = "orderNumber")
   private int orderNumber;
   private String customerName;
   private int productId;
