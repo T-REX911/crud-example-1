@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/v1")
+@RequestMapping("/products")
 public class ProductController {
   @Autowired
   private ProductService productService;
@@ -41,7 +41,7 @@ public class ProductController {
     return ResponseEntity.ok(products);
   }
 
-  @GetMapping("/products/{pageNumber}/{pageSize}")
+  @GetMapping("/{pageNumber}/{pageSize}")
   public ResponseEntity<Page<Product>> findAllProducts(@PathVariable int pageNumber,@PathVariable int pageSize){
 
     Page<Product> products = productService.getProductsPagination(pageNumber,pageSize);
@@ -63,7 +63,7 @@ public class ProductController {
     return productService.updateProduct(product);
   }
 
-  @DeleteMapping("/product/{id}")
+  @DeleteMapping("/{id}")
   public String deleteProductById(@PathVariable int id){
     return productService.deleteProduct(id);
   }
