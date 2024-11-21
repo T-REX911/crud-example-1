@@ -1,0 +1,703 @@
+{
+	"info": {
+		"_postman_id": "9e807593-ab0b-4f11-9420-bad22995b3b1",
+		"name": "crud-example-1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26772219"
+	},
+	"item": [
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "Get All Products",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:6784/api/v1/products/products",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6784",
+							"path": [
+								"api",
+								"v1",
+								"products",
+								"products"
+							]
+						},
+						"description": "This is a GET request and it is used to \"get\" data from an endpoint. There is no request body for a GET request, but you can use query parameters to help specify the resource you want data on (e.g., in this request, we have `id=1`).\n\nA successful GET response will have a `200 OK` status, and should include some kind of response body - for example, HTML web content or JSON data."
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Products Query",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:6784/api/v1/products/productsQ",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6784",
+							"path": [
+								"api",
+								"v1",
+								"products",
+								"productsQ"
+							]
+						},
+						"description": "This is a GET request and it is used to \"get\" data from an endpoint. There is no request body for a GET request, but you can use query parameters to help specify the resource you want data on (e.g., in this request, we have `id=1`).\n\nA successful GET response will have a `200 OK` status, and should include some kind of response body - for example, HTML web content or JSON data."
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Products Pageable",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:6784/api/v1/products/2/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6784",
+							"path": [
+								"api",
+								"v1",
+								"products",
+								"2",
+								"4"
+							]
+						},
+						"description": "This is a GET request and it is used to \"get\" data from an endpoint. There is no request body for a GET request, but you can use query parameters to help specify the resource you want data on (e.g., in this request, we have `id=1`).\n\nA successful GET response will have a `200 OK` status, and should include some kind of response body - for example, HTML web content or JSON data."
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Products List",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:6784/api/v1/products/productsList",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6784",
+							"path": [
+								"api",
+								"v1",
+								"products",
+								"productsList"
+							]
+						},
+						"description": "This is a GET request and it is used to \"get\" data from an endpoint. There is no request body for a GET request, but you can use query parameters to help specify the resource you want data on (e.g., in this request, we have `id=1`).\n\nA successful GET response will have a `200 OK` status, and should include some kind of response body - for example, HTML web content or JSON data."
+					},
+					"response": []
+				},
+				{
+					"name": "Get Product By Id",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:6784/api/v1/products/productById/140",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6784",
+							"path": [
+								"api",
+								"v1",
+								"products",
+								"productById",
+								"140"
+							]
+						},
+						"description": "This is a GET request and it is used to \"get\" data from an endpoint. There is no request body for a GET request, but you can use query parameters to help specify the resource you want data on (e.g., in this request, we have `id=1`).\n\nA successful GET response will have a `200 OK` status, and should include some kind of response body - for example, HTML web content or JSON data."
+					},
+					"response": []
+				},
+				{
+					"name": "Get Product By Name",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:6784/api/v1/products/productByName/car",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6784",
+							"path": [
+								"api",
+								"v1",
+								"products",
+								"productByName",
+								"car"
+							]
+						},
+						"description": "This is a GET request and it is used to \"get\" data from an endpoint. There is no request body for a GET request, but you can use query parameters to help specify the resource you want data on (e.g., in this request, we have `id=1`).\n\nA successful GET response will have a `200 OK` status, and should include some kind of response body - for example, HTML web content or JSON data."
+					},
+					"response": []
+				},
+				{
+					"name": "Add Product",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Successful POST request\", function () {",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 201]);",
+									"});",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"car\",\n    \"qty\": 10,\n    \"price\": 10500.00\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:6784/api/v1/products/addProduct",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6784",
+							"path": [
+								"api",
+								"v1",
+								"products",
+								"addProduct"
+							]
+						},
+						"description": "This is a POST request, submitting data to an API via the request body. This request submits JSON data, and the data is reflected in the response.\n\nA successful POST request typically returns a `200 OK` or `201 Created` response code."
+					},
+					"response": []
+				},
+				{
+					"name": "Add Producs",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Successful POST request\", function () {",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 201]);",
+									"});",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n    {\n        \"name\": \"delivery van\",\n        \"qty\": 7,\n        \"price\": 24000.00\n    },\n    {\n        \"name\": \"race car\",\n        \"qty\": 3,\n        \"price\": 150000.00\n    },\n    {\n        \"name\": \"segway scooter\",\n        \"qty\": 15,\n        \"price\": 2500.00\n    },\n    {\n        \"name\": \"electric bicycle\",\n        \"qty\": 12,\n        \"price\": 1500.00\n    },\n    {\n        \"name\": \"cruise ship\",\n        \"qty\": 1,\n        \"price\": 800000000.00\n    },\n    {\n        \"name\": \"electric car\",\n        \"qty\": 10,\n        \"price\": 35000.00\n    },\n    {\n        \"name\": \"dune buggy\",\n        \"qty\": 5,\n        \"price\": 18000.00\n    },\n    {\n        \"name\": \"skid loader\",\n        \"qty\": 4,\n        \"price\": 40000.00\n    },\n    {\n        \"name\": \"mini excavator\",\n        \"qty\": 3,\n        \"price\": 30000.00\n    },\n    {\n        \"name\": \"all-terrain vehicle\",\n        \"qty\": 10,\n        \"price\": 6000.00\n    },\n    {\n        \"name\": \"luxury yacht\",\n        \"qty\": 1,\n        \"price\": 5000000.00\n    },\n    {\n        \"name\": \"food truck\",\n        \"qty\": 4,\n        \"price\": 80000.00\n    },\n    {\n        \"name\": \"milk van\",\n        \"qty\": 6,\n        \"price\": 20000.00\n    },\n    {\n        \"name\": \"ice cream cart\",\n        \"qty\": 15,\n        \"price\": 1500.00\n    },\n    {\n        \"name\": \"paraglider\",\n        \"qty\": 3,\n        \"price\": 5000.00\n    },\n    {\n        \"name\": \"kiteboard\",\n        \"qty\": 12,\n        \"price\": 800.00\n    },\n    {\n        \"name\": \"camper trailer\",\n        \"qty\": 5,\n        \"price\": 18000.00\n    },\n    {\n        \"name\": \"scooter bike\",\n        \"qty\": 18,\n        \"price\": 700.00\n    },\n    {\n        \"name\": \"jet boat\",\n        \"qty\": 2,\n        \"price\": 50000.00\n    },\n    {\n        \"name\": \"gondola\",\n        \"qty\": 4,\n        \"price\": 12000.00\n    },\n    {\n        \"name\": \"tricycle\",\n        \"qty\": 25,\n        \"price\": 100.00\n    },\n    {\n        \"name\": \"off-road motorcycle\",\n        \"qty\": 6,\n        \"price\": 4500.00\n    },\n    {\n        \"name\": \"hover bike\",\n        \"qty\": 2,\n        \"price\": 60000.00\n    },\n    {\n        \"name\": \"motorized wheelchair\",\n        \"qty\": 8,\n        \"price\": 2500.00\n    },\n    {\n        \"name\": \"paddleboard\",\n        \"qty\": 20,\n        \"price\": 300.00\n    },\n    {\n        \"name\": \"log hauler\",\n        \"qty\": 2,\n        \"price\": 85000.00\n    },\n    {\n        \"name\": \"road roller\",\n        \"qty\": 3,\n        \"price\": 70000.00\n    },\n    {\n        \"name\": \"cement mixer\",\n        \"qty\": 4,\n        \"price\": 50000.00\n    },\n    {\n        \"name\": \"construction crane\",\n        \"qty\": 2,\n        \"price\": 250000.00\n    },\n    {\n        \"name\": \"personal submarine\",\n        \"qty\": 1,\n        \"price\": 2000000.00\n    },\n    {\n        \"name\": \"amphibious vehicle\",\n        \"qty\": 2,\n        \"price\": 120000.00\n    },\n    {\n        \"name\": \"hydrofoil\",\n        \"qty\": 1,\n        \"price\": 300000.00\n    },\n    {\n        \"name\": \"vintage car\",\n        \"qty\": 3,\n        \"price\": 50000.00\n    },\n    {\n        \"name\": \"sidecar motorcycle\",\n        \"qty\": 5,\n        \"price\": 7000.00\n    },\n    {\n        \"name\": \"steam engine\",\n        \"qty\": 1,\n        \"price\": 400000.00\n    },\n    {\n        \"name\": \"sleigh\",\n        \"qty\": 10,\n        \"price\": 500.00\n    },\n    {\n        \"name\": \"rickshaw bike\",\n        \"qty\": 8,\n        \"price\": 300.00\n    },\n    {\n        \"name\": \"snowboard\",\n        \"qty\": 20,\n        \"price\": 200.00\n    },\n    {\n        \"name\": \"dog sled\",\n        \"qty\": 4,\n        \"price\": 1000.00\n    },\n    {\n        \"name\": \"bobsled\",\n        \"qty\": 3,\n        \"price\": 1500.00\n    },\n    {\n        \"name\": \"jetliner\",\n        \"qty\": 1,\n        \"price\": 120000000.00\n    },\n    {\n        \"name\": \"hang glider\",\n        \"qty\": 6,\n        \"price\": 2500.00\n    },\n    {\n        \"name\": \"glider\",\n        \"qty\": 2,\n        \"price\": 15000.00\n    },\n    {\n        \"name\": \"cargo ship\",\n        \"qty\": 1,\n        \"price\": 400000000.00\n    },\n    {\n        \"name\": \"antique carriage\",\n        \"qty\": 3,\n        \"price\": 12000.00\n    },\n    {\n        \"name\": \"unicycle\",\n        \"qty\": 10,\n        \"price\": 150.00\n    },\n    {\n        \"name\": \"penny-farthing bicycle\",\n        \"qty\": 5,\n        \"price\": 800.00\n    },\n    {\n        \"name\": \"antique locomotive\",\n        \"qty\": 1,\n        \"price\": 500000.00\n    },\n    {\n        \"name\": \"tow truck\",\n        \"qty\": 4,\n        \"price\": 35000.00\n    },\n    {\n        \"name\": \"flatbed truck\",\n        \"qty\": 3,\n        \"price\": 45000.00\n    },\n    {\n        \"name\": \"cherry picker\",\n        \"qty\": 2,\n        \"price\": 55000.00\n    },\n    {\n        \"name\": \"blimp\",\n        \"qty\": 1,\n        \"price\": 1000000.00\n    },\n    {\n        \"name\": \"skydiving parachute\",\n        \"qty\": 12,\n        \"price\": 2000.00\n    },\n    {\n        \"name\": \"banana boat\",\n        \"qty\": 8,\n        \"price\": 1500.00\n    },\n    {\n        \"name\": \"hydro bike\",\n        \"qty\": 10,\n        \"price\": 400.00\n    },\n    {\n        \"name\": \"train car\",\n        \"qty\": 15,\n        \"price\": 30000.00\n    },\n    {\n        \"name\": \"handcar\",\n        \"qty\": 7,\n        \"price\": 1000.00\n    },\n    {\n        \"name\": \"double-decker bus\",\n        \"qty\": 2,\n        \"price\": 90000.00\n    },\n    {\n        \"name\": \"rail\",\n        \"qty\": 7,\n        \"price\": 1000.00\n    }\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:6784/api/v1/products/addProducts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6784",
+							"path": [
+								"api",
+								"v1",
+								"products",
+								"addProducts"
+							]
+						},
+						"description": "This is a POST request, submitting data to an API via the request body. This request submits JSON data, and the data is reflected in the response.\n\nA successful POST request typically returns a `200 OK` or `201 Created` response code."
+					},
+					"response": []
+				},
+				{
+					"name": "Update Product",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Successful PUT request\", function () {",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 201, 204]);",
+									"});",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":1,\n\t\"name\": \"jet\",\n    \"qty\": 10,\n    \"price\": 10500.00\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:6784/api/v1/products/updateProduct",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6784",
+							"path": [
+								"api",
+								"v1",
+								"products",
+								"updateProduct"
+							]
+						},
+						"description": "This is a PUT request and it is used to overwrite an existing piece of data. For instance, after you create an entity with a POST request, you may want to modify that later. You can do that using a PUT request. You typically identify the entity being updated by including an identifier in the URL (eg. `id=1`).\n\nA successful PUT request typically returns a `200 OK`, `201 Created`, or `204 No Content` response code."
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Product By Id",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Successful DELETE request\", function () {",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 202, 204]);",
+									"});",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:6784/api/v1/products/product/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6784",
+							"path": [
+								"api",
+								"v1",
+								"products",
+								"product",
+								"1"
+							]
+						},
+						"description": "This is a DELETE request, and it is used to delete data that was previously created via a POST request. You typically identify the entity being updated by including an identifier in the URL (eg. `id=1`).\n\nA successful DELETE request typically returns a `200 OK`, `202 Accepted`, or `204 No Content` response code."
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Order",
+			"item": [
+				{
+					"name": "Get All Orders By Order No.",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:6784/api/v1/orders/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6784",
+							"path": [
+								"api",
+								"v1",
+								"orders",
+								"5"
+							]
+						},
+						"description": "This is a GET request and it is used to \"get\" data from an endpoint. There is no request body for a GET request, but you can use query parameters to help specify the resource you want data on (e.g., in this request, we have `id=1`).\n\nA successful GET response will have a `200 OK` status, and should include some kind of response body - for example, HTML web content or JSON data."
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Orders",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:6784/api/v1/orders",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6784",
+							"path": [
+								"api",
+								"v1",
+								"orders"
+							]
+						},
+						"description": "This is a GET request and it is used to \"get\" data from an endpoint. There is no request body for a GET request, but you can use query parameters to help specify the resource you want data on (e.g., in this request, we have `id=1`).\n\nA successful GET response will have a `200 OK` status, and should include some kind of response body - for example, HTML web content or JSON data."
+					},
+					"response": []
+				},
+				{
+					"name": "Add Orders",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Successful POST request\", function () {",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 201]);",
+									"});",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n    {\n        \"orderNumber\": 5,\n        \"customerName\": \"Anil\",\n        \"productId\": 50\n    },\n    {\n        \"orderNumber\": 5,\n        \"customerName\": \"Anil\",\n        \"productId\": 48\n    }\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:6784/api/v1/orders/saveAll",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6784",
+							"path": [
+								"api",
+								"v1",
+								"orders",
+								"saveAll"
+							]
+						},
+						"description": "This is a POST request, submitting data to an API via the request body. This request submits JSON data, and the data is reflected in the response.\n\nA successful POST request typically returns a `200 OK` or `201 Created` response code."
+					},
+					"response": []
+				},
+				{
+					"name": "Add Order",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Successful POST request\", function () {",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 201]);",
+									"});",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n    {\n        \"orderNumber\": 5,\n        \"customerName\": \"Anil\",\n        \"productId\": 50\n    },\n    {\n        \"orderNumber\": 5,\n        \"customerName\": \"Anil\",\n        \"productId\": 48\n    }\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:6784/api/v1/orders/save",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6784",
+							"path": [
+								"api",
+								"v1",
+								"orders",
+								"save"
+							]
+						},
+						"description": "This is a POST request, submitting data to an API via the request body. This request submits JSON data, and the data is reflected in the response.\n\nA successful POST request typically returns a `200 OK` or `201 Created` response code."
+					},
+					"response": []
+				},
+				{
+					"name": "Update Order",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Successful PUT request\", function () {",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 201, 204]);",
+									"});",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":1,\n\t\"orderNumber\": 5,\n    \"customerName\": \"Anil\",\n    \"productId\": 140\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:6784/api/v1/orders/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6784",
+							"path": [
+								"api",
+								"v1",
+								"orders",
+								"update"
+							]
+						},
+						"description": "This is a PUT request and it is used to overwrite an existing piece of data. For instance, after you create an entity with a POST request, you may want to modify that later. You can do that using a PUT request. You typically identify the entity being updated by including an identifier in the URL (eg. `id=1`).\n\nA successful PUT request typically returns a `200 OK`, `201 Created`, or `204 No Content` response code."
+					},
+					"response": []
+				},
+				{
+					"name": "Update Order Query",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Successful PUT request\", function () {",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 201, 204]);",
+									"});",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":1,\n\t\"orderNumber\": 5,\n    \"customerName\": \"Anil\",\n    \"productId\": 140\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:6784/api/v1/orders/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6784",
+							"path": [
+								"api",
+								"v1",
+								"orders",
+								"update"
+							]
+						},
+						"description": "This is a PUT request and it is used to overwrite an existing piece of data. For instance, after you create an entity with a POST request, you may want to modify that later. You can do that using a PUT request. You typically identify the entity being updated by including an identifier in the URL (eg. `id=1`).\n\nA successful PUT request typically returns a `200 OK`, `201 Created`, or `204 No Content` response code."
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
