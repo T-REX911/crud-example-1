@@ -18,7 +18,14 @@ public class Employee {
     private int id;
     private String name;
     private int age;
+
+    //one to one
     @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "address_id")
+    @JoinColumn(name = "address_id",referencedColumnName = "id")
     private Address address;
+
+    //one to many
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "department_id")
+    private Department department;
 }
