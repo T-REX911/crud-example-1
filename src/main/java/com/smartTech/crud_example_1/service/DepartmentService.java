@@ -1,6 +1,6 @@
 package com.smartTech.crud_example_1.service;
 
-import com.smartTech.crud_example_1.entity.Test2.Department;
+import com.smartTech.crud_example_1.entity.Department;
 import com.smartTech.crud_example_1.repository.DepartmentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

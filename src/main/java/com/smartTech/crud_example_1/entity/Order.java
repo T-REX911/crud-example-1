@@ -1,4 +1,4 @@
-package com.smartTech.crud_example_1.entity.Test1;
+package com.smartTech.crud_example_1.entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
