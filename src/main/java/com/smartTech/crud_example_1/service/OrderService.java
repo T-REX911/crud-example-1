@@ -1,6 +1,6 @@
 package com.smartTech.crud_example_1.service;
 
-import com.smartTech.crud_example_1.entity.Test1.Order;
+import com.smartTech.crud_example_1.entity.Order;
 import com.smartTech.crud_example_1.repository.OrderRepository;
 import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,6 +1,6 @@
 package com.smartTech.crud_example_1.controller;
 
-import com.smartTech.crud_example_1.entity.Test1.Product;
+import com.smartTech.crud_example_1.entity.Product;
 import com.smartTech.crud_example_1.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;

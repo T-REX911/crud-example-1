@@ -1,6 +1,6 @@
 package com.smartTech.crud_example_1.repository;
 
-import com.smartTech.crud_example_1.entity.Test1.Product;
+import com.smartTech.crud_example_1.entity.Product;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;

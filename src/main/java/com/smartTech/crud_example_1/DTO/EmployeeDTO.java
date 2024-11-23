@@ -9,4 +9,5 @@ public class EmployeeDTO {
   private int address_id;
   private int passport_id;
   private int department_id;
+  private int project_id;
 }
