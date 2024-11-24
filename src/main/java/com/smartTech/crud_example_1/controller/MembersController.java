@@ -41,4 +41,10 @@ public class MembersController {
     Members members = membersService.assignBookToMemberService(memberDTO);
     return ResponseEntity.ok(members);
   }
+
+  @GetMapping("/book/{bookName}")
+  public ResponseEntity<List<Members>> getAllMembersByBook(@PathVariable String bookName){
+    List<Members> membersList = membersService.getAllMembersByBookService(bookName);
+    return ResponseEntity.ok(membersList);
+  }
 }

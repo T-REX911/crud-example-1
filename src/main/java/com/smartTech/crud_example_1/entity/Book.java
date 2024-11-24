@@ -1,6 +1,7 @@
 package com.smartTech.crud_example_1.entity;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import jakarta.transaction.Transactional;
 import lombok.AllArgsConstructor;
@@ -25,13 +26,13 @@ public class Book {
   @ManyToOne(cascade = CascadeType.ALL)
   @JoinColumn(name = "author_id")
   @JsonBackReference
-  //@JsonIgnore
+  @JsonIgnore
   private Authors authors;
 
   @ManyToMany(mappedBy = "bookList")
   @JsonBackReference
-  //@JsonIgnore
-  private List<Members> membersList = new ArrayList<>();;
+  @JsonIgnore
+  private List<Members> membersList = new ArrayList<>();
 
 }
 

@@ -53,4 +53,11 @@ public class MembersService {
     return membersRepository.save(existingMember);
 
   }
+
+  public List<Members> getAllMembersByBookService(String bookName) {
+    Book book = bookRepository.findByName(bookName);
+    List<Members> membersList = membersRepository.findByBookId(book.getId());
+
+    return membersList;
+  }
 }
