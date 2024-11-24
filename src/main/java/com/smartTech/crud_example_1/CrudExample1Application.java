@@ -11,3 +11,7 @@ public class CrudExample1Application {
 	}
 
 }
+
+
+//http://localhost:6784/api/v1/swagger-ui/index.html
+//http://localhost:6784/api/v1/v3/api-docs
