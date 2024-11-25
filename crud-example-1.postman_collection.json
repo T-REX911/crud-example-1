@@ -1431,6 +1431,201 @@
 					"item": []
 				}
 			]
+		},
+		{
+			"name": "Student Course Management System",
+			"item": [
+				{
+					"name": "Student",
+					"item": [
+						{
+							"name": "Add Student",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\":\"Sandun Devinda\",\r\n    \"email\":\"sandund@gmail.com\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:6784/api/v1/students/add",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "6784",
+									"path": [
+										"api",
+										"v1",
+										"students",
+										"add"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Add Students",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "[\r\n    {\r\n        \"name\": \"Amanda Silva\",\r\n        \"email\": \"amanda.silva@example.com\"\r\n    },\r\n    {\r\n        \"name\": \"Kamal Perera\",\r\n        \"email\": \"kamal.perera@example.com\"\r\n    },\r\n    {\r\n        \"name\": \"Nuwan Fernando\",\r\n        \"email\": \"nuwan.fernando@example.com\"\r\n    },\r\n    {\r\n        \"name\": \"Priya Kumari\",\r\n        \"email\": \"priya.kumari@example.com\"\r\n    },\r\n    {\r\n        \"name\": \"Rohan Dias\",\r\n        \"email\": \"rohan.dias@example.com\"\r\n    },\r\n    {\r\n        \"name\": \"Dilini Rathnayake\",\r\n        \"email\": \"dilini.rathnayake@example.com\"\r\n    },\r\n    {\r\n        \"name\": \"Isuru Wijesinghe\",\r\n        \"email\": \"isuru.wijesinghe@example.com\"\r\n    },\r\n    {\r\n        \"name\": \"Chathura Liyanage\",\r\n        \"email\": \"chathura.liyanage@example.com\"\r\n    },\r\n    {\r\n        \"name\": \"Sanjaya Karunaratne\",\r\n        \"email\": \"sanjaya.karunaratne@example.com\"\r\n    },\r\n    {\r\n        \"name\": \"Harini Jayasinghe\",\r\n        \"email\": \"harini.jayasinghe@example.com\"\r\n    }\r\n]\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:6784/api/v1/students/addAll",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "6784",
+									"path": [
+										"api",
+										"v1",
+										"students",
+										"addAll"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Assign course to student",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\":\"Sandun Devinda\",\r\n    \"email\":\"sandund@gmail.com\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:6784/api/v1/students/addAll",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "6784",
+									"path": [
+										"api",
+										"v1",
+										"students",
+										"addAll"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Course",
+					"item": [
+						{
+							"name": "Add Course",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\":\"\",\r\n    \"description\":\"\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:6784/api/v1/Courses/add",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "6784",
+									"path": [
+										"api",
+										"v1",
+										"Courses",
+										"add"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Add Courses",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "[\r\n    {\r\n        \"name\": \"Mathematics 101\",\r\n        \"description\": \"An introduction to fundamental concepts in algebra and calculus.\"\r\n    },\r\n    {\r\n        \"name\": \"Physics for Beginners\",\r\n        \"description\": \"Basic principles of classical mechanics, thermodynamics, and waves.\"\r\n    },\r\n    {\r\n        \"name\": \"Chemistry Essentials\",\r\n        \"description\": \"Fundamental chemical principles including atomic structure and bonding.\"\r\n    },\r\n    {\r\n        \"name\": \"English Literature\",\r\n        \"description\": \"Study of classic and modern literature works.\"\r\n    },\r\n    {\r\n        \"name\": \"Introduction to Programming\",\r\n        \"description\": \"Learn programming basics using Python.\"\r\n    },\r\n    {\r\n        \"name\": \"Web Development Basics\",\r\n        \"description\": \"An introduction to HTML, CSS, and JavaScript for building websites.\"\r\n    },\r\n    {\r\n        \"name\": \"Database Management\",\r\n        \"description\": \"Core concepts of relational databases and SQL.\"\r\n    },\r\n    {\r\n        \"name\": \"Environmental Science\",\r\n        \"description\": \"An overview of ecological principles and environmental issues.\"\r\n    },\r\n    {\r\n        \"name\": \"Business Management\",\r\n        \"description\": \"Introduction to business operations and management practices.\"\r\n    },\r\n    {\r\n        \"name\": \"Psychology 101\",\r\n        \"description\": \"Basics of human behavior and mental processes.\"\r\n    },\r\n    {\r\n        \"name\": \"Marketing Principles\",\r\n        \"description\": \"Core concepts in marketing and consumer behavior.\"\r\n    },\r\n    {\r\n        \"name\": \"Data Structures\",\r\n        \"description\": \"Fundamental data organization and manipulation techniques.\"\r\n    },\r\n    {\r\n        \"name\": \"Operating Systems\",\r\n        \"description\": \"Study of OS concepts such as processes, memory, and file systems.\"\r\n    },\r\n    {\r\n        \"name\": \"Art History\",\r\n        \"description\": \"Exploration of key movements and works in art history.\"\r\n    },\r\n    {\r\n        \"name\": \"Digital Media\",\r\n        \"description\": \"Overview of digital content creation and management.\"\r\n    },\r\n    {\r\n        \"name\": \"Mobile App Development\",\r\n        \"description\": \"Learn the basics of building Android and iOS applications.\"\r\n    },\r\n    {\r\n        \"name\": \"Introduction to Statistics\",\r\n        \"description\": \"Basic statistical methods and applications.\"\r\n    },\r\n    {\r\n        \"name\": \"Ethical Hacking\",\r\n        \"description\": \"Principles of cybersecurity and ethical hacking practices.\"\r\n    },\r\n    {\r\n        \"name\": \"Graphic Design\",\r\n        \"description\": \"Fundamentals of design using modern graphic tools.\"\r\n    },\r\n    {\r\n        \"name\": \"Public Speaking\",\r\n        \"description\": \"Techniques for effective oral communication.\"\r\n    }\r\n]\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:6784/api/v1/Courses/addAll",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "6784",
+									"path": [
+										"api",
+										"v1",
+										"Courses",
+										"addAll"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Enrollment",
+					"item": []
+				}
+			]
+		},
+		{
+			"name": "Hello",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:6784/api/v1/hello",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6784",
+					"path": [
+						"api",
+						"v1",
+						"hello"
+					]
+				}
+			},
+			"response": []
 		}
 	]
 }
